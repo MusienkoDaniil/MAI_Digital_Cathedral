@@ -195,17 +195,9 @@ class Program
         {
             // Засекаем время с использованием DateTime
             DateTime startTime = DateTime.Now;
-
-            // Вычисление интеграла с точностью 0.0000001
             double result = method.Integrate(f, 0.01, 1, 0.0000001);
-
-            // Засекаем время после выполнения
             DateTime endTime = DateTime.Now;
-
-            // Вычисление времени выполнения в миллисекундах
             TimeSpan elapsedTime = endTime - startTime;
-
-            // Вывод результата и времени выполнения
             Console.WriteLine($"{method.MethodName} Result: {result}, Time: {elapsedTime.TotalMilliseconds} ms");
         }
     }
